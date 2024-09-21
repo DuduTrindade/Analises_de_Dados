@@ -6,6 +6,6 @@
 
 ###
 
-<p align="left">Aqui você encontrará meus principais projetos que desenvolvo para mostrar meus conhecimentos e habilidades que estou adquirindo durante meus estudos na área de análises de dados.<br> A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abordagem diferente para resolver problemas reais ou hipotéticos.</p>
+<p align="left">Aqui você encontrará meus principais projetos que desenvolvo para mostrar meus conhecimentos e habilidades adquiridos durante meus estudos na área de análises de dados.<br> A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abordagem diferente para resolver problemas reais ou hipotéticos.</p>
 
 ###
