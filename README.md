@@ -7,6 +7,6 @@ Aqui você encontrará meus principais projetos que desenvolvo para mostrar meus
 A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abordagem diferente para resolver problemas reais ou hipotéticos.
 ## 🔗 Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eduardo-trindade-5506921b4/)
 
 
