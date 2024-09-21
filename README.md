@@ -1,4 +1,5 @@
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/IMG01.jpg)
 ## Projetos de Análises de dados
 
 Olá, seja bem-vindo(a) ao meu repositório de projetos de análises de dados.
