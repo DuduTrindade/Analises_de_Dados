@@ -10,7 +10,6 @@ A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abo
 
 Cada projeto será documentado com explicações detalhadas e código comentado, facilitando a reprodução e o aprendizado.
 
-Lista de Projetos:
 * Projeto SQL
 * Projeto Power BI
 * Excel
