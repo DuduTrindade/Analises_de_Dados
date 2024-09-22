@@ -8,7 +8,7 @@ A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abo
 
 ## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/pasta.png) Projetos
 
-Aqui estão os projetos que estou trabalhando concluídos ou em andamento e cada um será documentado com explicações detalhadas e código comentado, facilitando a reprodução e o aprendizado.
+Aqui estão os projetos realizados por mim, cada um será documentado com explicações detalhadas e código comentado, facilitando a reprodução e o aprendizado.
 
 * #### [Todos os Meus Projetos](https://github.com/DuduTrindade/Analises_de_Dados/tree/main/Projetos#projetos)
 
