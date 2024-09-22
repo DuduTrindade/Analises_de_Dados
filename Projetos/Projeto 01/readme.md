@@ -158,14 +158,6 @@ SELECT TOP 10
  FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
 GROUP BY P.Produto	
 ORDER BY Total DESC;
-
---Pergunta 6: Qual é a receita total por produto?
-SELECT 
-	P.Produto,
-	SUM(P.Preço_Unitario * I.Qtd_Vendida) AS [Total Vendido]
-FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
-GROUP BY P.Produto
-ORDER BY 2 DESC;
 ~~~
 
 
