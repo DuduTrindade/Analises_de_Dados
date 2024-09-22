@@ -174,9 +174,17 @@ GROUP BY P.Produto
 ORDER BY 2 DESC;
 ~~~
 
+**Pergunta 6**: Qual é a receita total por marca?
 
-
-
+~~~SQL
+SELECT 
+	P.Marca,
+	SUM(P.Preço_Unitario * I.Qtd_Vendida) AS [Total Vendido]
+FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
+GROUP BY P.Marca
+ORDER BY 2 DESC;	
+~~~
+**Insight**: Calcular a receita total gerada por cada marca para identificar os produtos mais lucrativos.
 
 
 
