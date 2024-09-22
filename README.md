@@ -6,7 +6,7 @@ Olá, seja bem-vindo(a) ao meu repositório de projetos de análises de dados.
 Aqui você encontrará meus principais projetos que desenvolvo para mostrar meus conhecimentos e habilidades adquiridos durante meus estudos na área de análises de dados.
 A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abordagem diferente para resolver problemas reais ou hipotéticos.
 
-## Projetos
+## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/icons8-opened-folder-50.pngProjetos) Projetos
 
 Lista de Projetos
 
