@@ -23,3 +23,25 @@ As seguintes análises serão realizadas:
 *	Análise de Performance das Lojas
 
 Com base nesses insights, a empresa pode tomar decisões informadas para otimizar suas operações, melhorar a experiência do cliente e aumentar a lucratividade.
+
+## Estrutura do Conjunto de Dados
+
+O conjunto de dados é composto pelas seguintes tabelas:
+*	Clientes: Contém informações demográficas dos clientes.
+*	Devoluções: Registra as devoluções de produtos.
+*	Itens: Detalha os itens vendidos em cada venda.
+*	Localidades: Armazena informações geográficas das lojas.
+*	Lojas: Contém informações sobre as lojas.
+*	Produtos: Armazena informações sobre os produtos vendidos.
+*	Vendas: Registra as vendas realizadas.
+
+Neste projeto estou utilizando o Sistema de Gerenciamento de Banco de Dados (SGBD) SQL Server da Microsoft, mas você poderá utilizar qualquer outro SGBD relacional.
+Abaixo segue o diagrama do banco chamado Vendas e seus respectivos relacionamentos.
+
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/DIAGRAMA%20VENDAS.png)
+
+## Análises e Insights
+
+
+
+
