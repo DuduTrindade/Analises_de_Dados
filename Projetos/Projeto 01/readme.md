@@ -132,9 +132,11 @@ ORDER BY Faixa_Etaria,
 **Insight**: Entender a distribuição de gênero em diferentes faixas etárias pode ajudar a criar campanhas de marketing mais direcionadas.
 
 
+**Pergunta 4*: Qual é o nível educacional mais comum entre os clientes?
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2004.png)
 
-
+**Insight*: Entender o nível educacional pode ajudar a criar campanhas de marketing mais eficazes e ajustar a linguagem e o tom das comunicações.
 
 
 
