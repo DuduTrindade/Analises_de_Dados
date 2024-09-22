@@ -66,3 +66,67 @@ FROM CTE_Distribuicao_EstadoCivil
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2001.png)
 
 **Insight**: Identificar quais estados civis são mais comuns entre os clientes, permitindo segmentações específicas.
+
+**Pergunta 2**: Quantos clientes temos em cada país?
+
+~~~SQL
+SELECT 
+	L.País,
+	COUNT(C.ID_Cliente) AS [Clientes Por País]
+FROM Clientes C INNER JOIN Localidades L ON C.Id_Localidade = L.Id_Localidade
+GROUP BY L.País
+ORDER BY [Clientes Por País] DESC;
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
