@@ -224,6 +224,9 @@ FROM Produtos P
 ORDER BY Margem_Lucro DESC;
 ~~~
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2008.png)
+
+
 **Insight**: Identificar produtos com maior margem de lucro pode ajudar a focar em produtos mais rentáveis.
 
 
