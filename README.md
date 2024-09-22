@@ -9,8 +9,8 @@ A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abo
 ## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/pasta.png) Projetos
 
 Lista de Projetos:
-*
-*
+**
+**
 
 ## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/link.png) Contato 
 
