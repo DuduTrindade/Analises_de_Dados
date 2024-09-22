@@ -210,18 +210,11 @@ SELECT
 	Preço_unitario,
 	Custo_Unitario,
 	(Preço_unitario - Custo_Unitario) AS 'Margem_Lucro(R$)',
-	(Custo_Unitario / Preço_Unitario) * 100 AS 'Margem_Lucro(%)'
+	((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 AS 'Margem_Lucro(%)'
 FROM PRODUTOS
+WHERE ((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 >= 80
 ORDER BY 5 DESC;
 
-SELECT 
-    P.Produto,
-    P.Marca,
-    P.Preço_Unitario,
-    P.Custo_Unitario,
-    (P.Preço_Unitario - P.Custo_Unitario) AS Margem_Lucro
-FROM Produtos P
-ORDER BY Margem_Lucro DESC;
 ~~~
 
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2008.png)
