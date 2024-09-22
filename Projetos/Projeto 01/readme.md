@@ -159,7 +159,7 @@ SELECT TOP 10
 GROUP BY P.Produto	
 ORDER BY Total DESC;
 ~~~
-
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2005.png)
 
 
 
