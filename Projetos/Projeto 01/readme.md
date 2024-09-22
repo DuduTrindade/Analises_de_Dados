@@ -163,16 +163,6 @@ ORDER BY Total DESC;
 
 **Insight**: Identificar os produtos que têm maior demanda para otimizar o estoque e promover os itens mais populares.
 
-**Pergunta 6**: Qual é a receita total por produto?
-~~~SQL
---Pergunta 6: Qual é a receita total por produto?
-SELECT 
-	P.Produto,
-	SUM(P.Preço_Unitario * I.Qtd_Vendida) AS [Total Vendido]
-FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
-GROUP BY P.Produto
-ORDER BY 2 DESC;
-~~~
 
 **Pergunta 6**: Qual é a receita total por marca?
 
