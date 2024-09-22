@@ -79,7 +79,7 @@ ORDER BY [Clientes Por País] DESC;
 ~~~
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2002.png)
 
-
+**Insight**: Identificar a distribuição geográfica dos clientes pode ajudar a adaptar estratégias de marketing para diferentes regiões.
 
 
 
