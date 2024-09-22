@@ -96,10 +96,10 @@ ORDER BY Total DESC;
 
 --Pergunta 6: Qual é a receita total por marca?
 SELECT 
-	P.Produto,
+	P.Marca,
 	SUM(P.Preço_Unitario * I.Qtd_Vendida) AS [Total Vendido]
 FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
-GROUP BY P.Produto
+GROUP BY P.Marca
 ORDER BY 2 DESC;
 
 -- Pergunta 7: Qual é a receita média por venda?
