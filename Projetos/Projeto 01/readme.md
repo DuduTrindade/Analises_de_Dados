@@ -7,3 +7,19 @@ A empresa atende tanto clientes individuais quanto empresariais, operando atrav�
 diversas regiões e países. Com uma ampla gama de produtos e um alcance geográfico significativo, a empresa se dedica a oferecer soluções tecnológicas de alta qualidade 
 para uma base de clientes diversificada.
 
+## Situações Problemas
+A empresa de varejo fictícia TechGlobal Solutions especializada em produtos eletrônicos está enfrentando múltiplos desafios que estão impactando a eficiência operacional e a 
+rentabilidade. Com uma base de clientes diversificada e uma ampla gama de produtos distribuídos por várias regiões e países, a empresa precisa de insights detalhados para 
+tomar decisões informadas. Esses insights são essenciais para entender melhor os clientes, otimizar o estoque, melhorar as estratégias de marketing, reduzir as devoluções e 
+aumentar as vendas.
+
+## Objetivo da Análise de Dados (SQL)
+A análise de dados, utilizando SQL, pode ser fundamental para resolver esses problemas e fornecer insights valiosos que ajudam a aumentar as vendas de várias maneiras. 
+As seguintes análises serão realizadas:
+*	Análise de Clientes
+*	Análise de Produtos e Vendas
+*	Análise de Devoluções
+*	Análise Geográfica
+*	Análise de Performance das Lojas
+
+Com base nesses insights, a empresa pode tomar decisões informadas para otimizar suas operações, melhorar a experiência do cliente e aumentar a lucratividade.
