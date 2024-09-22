@@ -127,9 +127,9 @@ ORDER BY Faixa_Etaria,
 		 Total_Genero DESC;
 ~~~
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2003.png)
 
-
-
+**Insight**: Entender a distribuição de gênero em diferentes faixas etárias pode ajudar a criar campanhas de marketing mais direcionadas.
 
 
 
