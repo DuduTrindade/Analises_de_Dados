@@ -63,4 +63,5 @@ SELECT
 	(100.0 * [Total Estado Civil]) / [Total Clientes] AS [% Por Estado Civil]
 FROM CTE_Distribuicao_EstadoCivil
 ~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2001.png)
 
