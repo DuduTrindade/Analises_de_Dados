@@ -77,6 +77,7 @@ FROM Clientes C INNER JOIN Localidades L ON C.Id_Localidade = L.Id_Localidade
 GROUP BY L.País
 ORDER BY [Clientes Por País] DESC;
 ~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2002.png)
 
 
 
