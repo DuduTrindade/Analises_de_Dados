@@ -17,6 +17,8 @@ Aqui estão os projetos realizados por mim, cada um será documentado com explic
 
 ## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/link.png) Contato 
 
+Fique a vontade para entrar em contato comigo
+
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eduardo-trindade-5506921b4/)
 
 
