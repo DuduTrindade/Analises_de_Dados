@@ -117,25 +117,19 @@ FROM (
 ) AS Receita_Vendas_Media;
 
 
---  Pergunta 8: Quais produtos têm a maior margem de lucro?
+--  Pergunta 8: Quais produtos têm a margem de lucro acima de 80%?
 
 SELECT 
 	Produto,
 	Preço_unitario,
 	Custo_Unitario,
 	(Preço_unitario - Custo_Unitario) AS 'Margem_Lucro(R$)',
-	(Custo_Unitario / Preço_Unitario) * 100 AS 'Margem_Lucro(%)'
+	((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 AS 'Margem_Lucro(%)'
 FROM PRODUTOS
+WHERE ((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 > 40
 ORDER BY 5 DESC;
 
-SELECT 
-    P.Produto,
-    P.Marca,
-    P.Preço_Unitario,
-    P.Custo_Unitario,
-    (P.Preço_Unitario - P.Custo_Unitario) AS Margem_Lucro
-FROM Produtos P
-ORDER BY Margem_Lucro DESC;
+
 
 
 
