@@ -94,7 +94,7 @@ ORDER BY QTDE DESC;
 GROUP BY P.Produto	
 ORDER BY Total DESC;
 
---Pergunta 6: Qual é a receita total por produto?
+--Pergunta 6: Qual é a receita total por marca?
 SELECT 
 	P.Produto,
 	SUM(P.Preço_Unitario * I.Qtd_Vendida) AS [Total Vendido]
