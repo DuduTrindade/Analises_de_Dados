@@ -77,11 +77,55 @@ FROM Clientes C INNER JOIN Localidades L ON C.Id_Localidade = L.Id_Localidade
 GROUP BY L.País
 ORDER BY [Clientes Por País] DESC;
 ~~~
+
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2002.png)
 
 **Insight**: Identificar a distribuição geográfica dos clientes pode ajudar a adaptar estratégias de marketing para diferentes regiões.
 
-
+**Pergunta 3**: Qual é a distribuição de clientes por gênero em cada faixa etária?
+~~~SQL
+/*
+[1]	0-17 anos
+[2]	18-25 anos
+[3]	26-35 anos
+[4]	36-45 anos
+[5]	46-55 anos
+[6]	56-65 anos
+[7]	66 anos ou mais
+*/
+WITH CTE_Distribuicao_Genero (Genero, Faixa_Etaria)
+AS
+(
+	SELECT 
+		Genero,
+		CASE 
+			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) <= 17 THEN 1
+			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 18 AND 25 THEN 2
+			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 26 AND 35 THEN 3
+			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 36 AND 45 THEN 4
+			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 46 AND 55 THEN 5
+			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 56 AND 65 THEN 6
+			ELSE  7
+		END Faixa_Etaria
+	FROM Clientes
+)
+SELECT
+	Genero,
+	CASE
+		WHEN Faixa_Etaria = 1 THEN '0-17'
+		WHEN Faixa_Etaria = 2 THEN '18-25'
+		WHEN Faixa_Etaria = 3 THEN '26-35'
+		WHEN Faixa_Etaria = 4 THEN '36-45'
+		WHEN Faixa_Etaria = 5 THEN '46-55'
+		WHEN Faixa_Etaria = 6 THEN '56-65'
+		ELSE '66+'
+	END	Faixa_Etaria,
+	COUNT(Faixa_Etaria) AS Total_Genero
+FROM CTE_Distribuicao_Genero
+GROUP BY Faixa_Etaria, Genero
+ORDER BY Faixa_Etaria,
+		 Total_Genero DESC;
+~~~
 
 
 
