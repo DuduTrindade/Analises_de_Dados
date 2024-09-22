@@ -5,7 +5,7 @@
 Este projeto analisa um negócio de varejo fictício especializado em produtos eletrônicos, incluindo dispositivos móveis, computadores e acessórios tecnológicos. 
 A empresa atende tanto clientes individuais quanto empresariais, operando através de uma plataforma online e uma rede de lojas físicas estrategicamente localizadas em 
 diversas regiões e países. Com uma ampla gama de produtos e um alcance geográfico significativo, a empresa se dedica a oferecer soluções tecnológicas de alta qualidade 
-para uma base de clientes diversificada.
+para uma base de clientes diversificada. Retornar ao [início.](https://github.com/DuduTrindade/Analises_de_Dados/tree/main)
 
 ## Situação Problema
 A empresa de varejo fictícia TechGlobal Solutions especializada em produtos eletrônicos está enfrentando múltiplos desafios que estão impactando a eficiência operacional e a 
