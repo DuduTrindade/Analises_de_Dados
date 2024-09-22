@@ -65,3 +65,4 @@ FROM CTE_Distribuicao_EstadoCivil
 ~~~
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2001.png)
 
+**Insight**: Identificar quais estados civis são mais comuns entre os clientes, permitindo segmentações específicas.
