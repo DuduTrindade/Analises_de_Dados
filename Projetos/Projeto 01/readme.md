@@ -136,7 +136,7 @@ ORDER BY Faixa_Etaria,
 
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2004.png)
 
-**Insight*: Entender o nível educacional pode ajudar a criar campanhas de marketing mais eficazes e ajustar a linguagem e o tom das comunicações.
+**Insight**: Entender o nível educacional pode ajudar a criar campanhas de marketing mais eficazes e ajustar a linguagem e o tom das comunicações.
 
 
 
