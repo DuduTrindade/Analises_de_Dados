@@ -214,7 +214,6 @@ SELECT
 FROM PRODUTOS
 WHERE ((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 >= 80
 ORDER BY 5 DESC;
-
 ~~~
 
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2008.png)
