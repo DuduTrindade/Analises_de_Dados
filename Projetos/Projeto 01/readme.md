@@ -174,7 +174,9 @@ FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
 GROUP BY P.Marca
 ORDER BY 2 DESC;	
 ~~~
+
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2006.png)
+
 **Insight**: Calcular a receita total gerada por cada marca para identificar os produtos mais lucrativos.
 
 
