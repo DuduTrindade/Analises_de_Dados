@@ -138,7 +138,7 @@ ORDER BY Faixa_Etaria,
 
 **Insight**: Entender o nível educacional pode ajudar a criar campanhas de marketing mais eficazes e ajustar a linguagem e o tom das comunicações.
 
-----
+-
 
 
 
