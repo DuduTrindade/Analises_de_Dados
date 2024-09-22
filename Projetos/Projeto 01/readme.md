@@ -146,7 +146,7 @@ ORDER BY QTDE DESC;
 
 **Insight**: Entender o nível educacional pode ajudar a criar campanhas de marketing mais eficazes e ajustar a linguagem e o tom das comunicações.
 
-#### Análise de Produtos e Vendas
+### Análise de Produtos e Vendas
 
 
 
