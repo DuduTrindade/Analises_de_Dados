@@ -126,7 +126,7 @@ SELECT
 	(Preço_unitario - Custo_Unitario) AS 'Margem_Lucro(R$)',
 	((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 AS 'Margem_Lucro(%)'
 FROM PRODUTOS
-WHERE ((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 > 40
+WHERE ((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 >= 80
 ORDER BY 5 DESC;
 
 
