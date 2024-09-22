@@ -10,7 +10,7 @@ A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abo
 
 Lista de Projetos
 
-## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/icons8-resources-and-links-15.png) Links 
+## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/icons8-resources-and-links-30.png) Links 
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eduardo-trindade-5506921b4/)
 
