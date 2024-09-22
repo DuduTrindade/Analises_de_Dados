@@ -133,6 +133,14 @@ ORDER BY Faixa_Etaria,
 
 
 **Pergunta 4**: Qual é o nível educacional mais comum entre os clientes?
+~~~SQL
+SELECT 
+	Nivel_Escolar AS Nivel_Educacional,
+	COUNT(*) AS QTDE
+FROM Clientes
+GROUP BY Nivel_Escolar
+ORDER BY QTDE DESC; 
+~~~
 
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2004.png)
 
