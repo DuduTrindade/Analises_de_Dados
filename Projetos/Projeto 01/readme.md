@@ -148,7 +148,25 @@ ORDER BY QTDE DESC;
 
 ### Análise de Produtos e Vendas
 
+**Pergunta 5**: Quais são os produtos mais vendidos?
 
+~~~SQL
+SELECT TOP 10
+	P.Produto AS Nome,
+	COUNT(I.Qtd_Vendida) AS Qtde_Vendas,
+	SUM(I.Qtd_Vendida * P.Preço_Unitario) AS Total
+ FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
+GROUP BY P.Produto	
+ORDER BY Total DESC;
+
+--Pergunta 6: Qual é a receita total por produto?
+SELECT 
+	P.Produto,
+	SUM(P.Preço_Unitario * I.Qtd_Vendida) AS [Total Vendido]
+FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
+GROUP BY P.Produto
+ORDER BY 2 DESC;
+~~~
 
 
 
