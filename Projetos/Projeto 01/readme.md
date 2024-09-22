@@ -161,7 +161,7 @@ ORDER BY Total DESC;
 ~~~
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2005.png)
 
-
+**Insight**: Identificar os produtos que têm maior demanda para otimizar o estoque e promover os itens mais populares.
 
 
 
