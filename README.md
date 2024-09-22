@@ -10,7 +10,7 @@ A proposta é criar soluções baseadas em dados, onde cada projeto traz uma abo
 
 Aqui estão os projetos que estou trabalhando concluídos ou em andamento e cada um será documentado com explicações detalhadas e código comentado, facilitando a reprodução e o aprendizado.
 
-*#### [Análises de dados com SQL](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/projeto.md#an%C3%A1lise-de-dados-com-sql)
+* #### [Análises de dados com SQL](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/projeto.md#an%C3%A1lise-de-dados-com-sql)
 
 
 ## ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/imagens/link.png) Contato 
