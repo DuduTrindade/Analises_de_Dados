@@ -181,10 +181,25 @@ ORDER BY 2 DESC;
 **Insight**: Calcular a receita total gerada por cada marca para identificar os produtos mais lucrativos.
 
 
+**Pergunta 7**: Qual é a receita média por venda?
 
+~~~SQL
+SELECT
+	AVG(Total_Vendas) AS Receita_Média
+FROM (
+	SELECT 
+		V.Id_Venda,
+		SUM(P.Preço_Unitario * I.Qtd_Vendida) AS Total_Vendas
+	FROM Vendas V 
+	INNER JOIN Itens I ON V.Id_Venda = I.Id_Venda
+	INNER JOIN Produtos P ON P.SKU = I.SKU
+	GROUP BY V.Id_Venda
+) AS Receita_Vendas_Media;
+~~~
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2007.png)
 
-
+**Insight**: Calcular a receita média por venda ajuda a avaliar o ticket médio e otimizar estratégias de precificação.
 
 
 
