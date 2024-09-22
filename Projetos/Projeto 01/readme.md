@@ -45,3 +45,22 @@ Abaixo segue o diagrama do banco chamado Vendas e seus respectivos relacionament
 ### Análise de Clientes
 **Pergunta 1**: Qual é a distribuição de clientes por estado civil?
 
+~~~SQL
+WITH CTE_Distribuicao_EstadoCivil
+AS
+(
+	SELECT 
+		CASE WHEN Estado_Civil = 'C' THEN 'Solteiro(a)'
+			ELSE 'Casado(a)'
+		END	Estado_Civil,
+		COUNT(*) AS [Total Estado Civil],
+		(SELECT COUNT(*) FROM Clientes) AS [Total Clientes]
+	FROM Clientes
+	GROUP BY Estado_Civil
+)
+SELECT
+	*,
+	(100.0 * [Total Estado Civil]) / [Total Clientes] AS [% Por Estado Civil]
+FROM CTE_Distribuicao_EstadoCivil
+~~~
+
