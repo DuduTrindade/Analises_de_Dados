@@ -202,11 +202,29 @@ FROM (
 **Insight**: Calcular a receita média por venda ajuda a avaliar o ticket médio e otimizar estratégias de precificação.
 
 
+**Pergunta 8**: Quais produtos têm a maior margem de lucro?
 
+~~~SQL
+SELECT 
+	Produto,
+	Preço_unitario,
+	Custo_Unitario,
+	(Preço_unitario - Custo_Unitario) AS 'Margem_Lucro(R$)',
+	(Custo_Unitario / Preço_Unitario) * 100 AS 'Margem_Lucro(%)'
+FROM PRODUTOS
+ORDER BY 5 DESC;
 
+SELECT 
+    P.Produto,
+    P.Marca,
+    P.Preço_Unitario,
+    P.Custo_Unitario,
+    (P.Preço_Unitario - P.Custo_Unitario) AS Margem_Lucro
+FROM Produtos P
+ORDER BY Margem_Lucro DESC;
+~~~
 
-
-
+**Insight**: Identificar produtos com maior margem de lucro pode ajudar a focar em produtos mais rentáveis.
 
 
 
