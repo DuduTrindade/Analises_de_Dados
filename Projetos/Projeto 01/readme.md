@@ -233,7 +233,7 @@ FROM Devolucoes
 GROUP BY Motivo_Devolucao
 ORDER BY Qtde_Totais_Devolucao DESC;
 ~~~
-
+![Pergunta 09](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2009.png)
 
 
 
