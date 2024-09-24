@@ -140,7 +140,7 @@ FROM Devolucoes
 GROUP BY Motivo_Devolucao
 ORDER BY Qtde_Totais_Devolucao DESC;
 
-
+-- Pergunta 10: Qual produto tem a maior quantidade de devoluções?
 
 
 
