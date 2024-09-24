@@ -221,6 +221,63 @@ ORDER BY 5 DESC;
 
 **Insight**: Identificar produtos com maior margem de lucro pode ajudar a focar em produtos mais rentáveis.
 
+### Análise de Devoluções
+
+**Pergunta 9**: Qual é o motivo de devolução mais comum?
+
+~~~SQL
+SELECT 
+	Motivo_Devolucao,
+	COUNT(*) AS Qtde_Totais_Devolucao
+FROM Devolucoes
+GROUP BY Motivo_Devolucao
+ORDER BY Qtde_Totais_Devolucao DESC;
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

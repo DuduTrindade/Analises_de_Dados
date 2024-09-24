@@ -129,12 +129,16 @@ FROM PRODUTOS
 WHERE ((Preço_unitario - Custo_Unitario) / Preço_unitario) * 100 >= 80
 ORDER BY 5 DESC;
 
+-- ############# Análise de Devoluções #################
 
+--Pergunta 9: Qual é o motivo de devolução mais comum?
 
-
-
-
-
+SELECT 
+	Motivo_Devolucao,
+	COUNT(*) AS Qtde_Totais_Devolucao
+FROM Devolucoes
+GROUP BY Motivo_Devolucao
+ORDER BY Qtde_Totais_Devolucao DESC;
 
 
 
