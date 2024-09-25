@@ -142,14 +142,14 @@ ORDER BY Qtde_Totais_Devolucao DESC;
 
 -- Pergunta 10: Quais produtos tem a maiores quantidades de devoluções?
 
-SELECT TOP 10
+SELECT TOP 20
 	P.Produto,
-	COUNT(D.Qtd_Devolvida) AS Quant_Devolucoes
+	SUM(D.Qtd_Devolvida) AS Quant_Devolucoes
 FROM Devolucoes D INNER JOIN Produtos P ON D.SKU = P.SKU
 GROUP BY P.Produto
 ORDER BY Quant_Devolucoes DESC;
 
-
+-- Pergunta 11: Qual é a taxa de devolução por produto?
 
 
 
