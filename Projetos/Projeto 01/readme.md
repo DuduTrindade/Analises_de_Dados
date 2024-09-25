@@ -237,9 +237,16 @@ ORDER BY Qtde_Totais_Devolucao DESC;
 
 **Insight**: Analisar os motivos das devoluções para identificar problemas comuns com produtos ou processos de venda.
 
+**Pergunta 10**: Quais produtos tem a maiores quantidades de devoluções?
 
-
-
+~~~SQL
+SELECT TOP 10
+	P.Produto,
+	COUNT(D.Qtd_Devolvida) AS Quant_Devolucoes
+FROM Devolucoes D INNER JOIN Produtos P ON D.SKU = P.SKU
+GROUP BY P.Produto
+ORDER BY Quant_Devolucoes DESC;
+~~~
 
 
 
