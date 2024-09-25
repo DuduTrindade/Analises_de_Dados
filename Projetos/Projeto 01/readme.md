@@ -240,7 +240,7 @@ ORDER BY Qtde_Totais_Devolucao DESC;
 **Pergunta 10**: Quais produtos tem as maiores quantidades de devoluções?
 
 ~~~SQL
-SELECT TOP 10
+SELECT TOP 20
 	P.Produto,
 	COUNT(D.Qtd_Devolvida) AS Quant_Devolucoes
 FROM Devolucoes D INNER JOIN Produtos P ON D.SKU = P.SKU
