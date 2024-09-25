@@ -237,7 +237,7 @@ ORDER BY Qtde_Totais_Devolucao DESC;
 
 **Insight**: Analisar os motivos das devoluções para identificar problemas comuns com produtos ou processos de venda.
 
-**Pergunta 10**: Quais produtos tem a maiores quantidades de devoluções?
+**Pergunta 10**: Quais produtos tem as maiores quantidades de devoluções?
 
 ~~~SQL
 SELECT TOP 10
@@ -248,9 +248,9 @@ GROUP BY P.Produto
 ORDER BY Quant_Devolucoes DESC;
 ~~~
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2010.png)
 
-
-
+**Insight**: Identificar produtos que são frequentemente devolvidos, o que pode indicar problemas de qualidade ou expectativas dos clientes.
 
 
 
