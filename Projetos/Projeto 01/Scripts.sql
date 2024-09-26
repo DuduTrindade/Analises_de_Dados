@@ -175,7 +175,7 @@ INNER JOIN Devolucoes_Totais DT ON DT.SKU = P.SKU
 GROUP BY P.Produto,VT.Total_Vendido, DT.Totais_Devolucao
 ORDER BY 'Taxa_Devolucao%' DESC;
 
-
+-- Pergunta 12: Qual loja tem a maior taxa de devoluções?
 
 
 
