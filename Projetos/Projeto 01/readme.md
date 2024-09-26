@@ -280,8 +280,9 @@ INNER JOIN Devolucoes_Totais DT ON DT.SKU = P.SKU
 GROUP BY P.Produto,VT.Total_Vendido, DT.Totais_Devolucao
 ORDER BY 'Taxa_Devolucao%' DESC;
 ~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2011.png)
 
-
+**Insight**: Calcular a taxa de devolução pode ajudar a identificar problemas com produtos específicos.
 
 
 
