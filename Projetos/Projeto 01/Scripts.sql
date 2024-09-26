@@ -150,7 +150,30 @@ GROUP BY P.Produto
 ORDER BY Quant_Devolucoes DESC;
 
 -- Pergunta 11: Qual é a taxa de devolução por produto?
-
+WITH Devolucoes_Totais AS (
+	SELECT
+		D.SKU,
+		SUM(D.Qtd_Devolvida) AS Totais_Devolucao
+	FROM Devolucoes D 
+	GROUP BY D.SKU
+),
+Vendas_Totais AS (
+	SELECT
+		I.SKU,
+		SUM(I.Qtd_Vendida) AS Total_Vendido
+	FROM Itens I INNER JOIN Vendas V ON V.Id_Venda = I.Id_Venda
+	GROUP BY I.SKU
+)
+SELECT TOP 20
+	P.Produto,
+	VT.Total_Vendido,
+	DT.Totais_Devolucao,
+	(SUM(DT.Totais_Devolucao) * 100.0 / SUM(VT.Total_Vendido)) AS 'Taxa_Devolucao%'
+FROM Produtos P 
+INNER JOIN Vendas_Totais VT ON P.SKU = VT.SKU
+INNER JOIN Devolucoes_Totais DT ON DT.SKU = P.SKU
+GROUP BY P.Produto,VT.Total_Vendido, DT.Totais_Devolucao
+ORDER BY 'Taxa_Devolucao%' DESC;
 
 
 
