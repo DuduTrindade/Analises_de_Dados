@@ -202,8 +202,10 @@ ORDER BY 2 DESC;
 
 ~~~SQL
 SELECT
+ -- Calcula a média da receita total de cada venda (Total_Vendas), obtida na subconsulta.
 	AVG(Total_Vendas) AS Receita_Média
 FROM (
+-- Subconsulta para calcular a receita total de cada venda
 	SELECT 
 		V.Id_Venda,
 		SUM(P.Preço_Unitario * I.Qtd_Vendida) AS Total_Vendas
