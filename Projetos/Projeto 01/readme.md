@@ -296,7 +296,7 @@ WITH Devolucoes_Totais AS (
 	GROUP BY D.ID_Loja
 ),
 
-CTE para calcular o total de vendas por loja
+-- CTE para calcular o total de vendas por loja
 Vendas_Totais AS (
 	SELECT
 		V.ID_Loja,
@@ -305,7 +305,7 @@ Vendas_Totais AS (
 	GROUP BY V.ID_Loja
 )
 
-Seleção principal das 20 lojas com a maior taxa de devolução
+-- Seleção principal das 20 lojas com a maior taxa de devolução
 SELECT TOP 20
 	L.ID_Loja,
 	Total_Lojas_Vendas,
