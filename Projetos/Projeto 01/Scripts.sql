@@ -2,22 +2,37 @@
 -- ############# Análise de Clientes #################
 -- Pergunta 1: Qual é a distribuição de clientes por estado civil?
 
-WITH CTE_Distribuicao_EstadoCivil
-AS
+-- CTE para calcular a quantidade total de clientes por Estado Civil.
+WITH Total_Estado_Civil AS
 (
 	SELECT 
-		CASE WHEN Estado_Civil = 'C' THEN 'Solteiro(a)'
+		CASE
+			WHEN Estado_Civil = 'C' THEN 'Solteiro(a)'
 			ELSE 'Casado(a)'
 		END	Estado_Civil,
-		COUNT(*) AS [Total Estado Civil],
-		(SELECT COUNT(*) FROM Clientes) AS [Total Clientes]
+		COUNT(*) AS [Total Estado Civil] -- Conta o número de clientes em cada estado civil.		
 	FROM Clientes
 	GROUP BY Estado_Civil
+),
+
+-- CTE para calcular o total geral de clientes na tabela.
+Total_Clientes AS
+(
+	SELECT 
+		COUNT(*) AS [Total Clientes]
+	FROM Clientes 
 )
+
+-- Consulta principal para combinar os resultados das duas CTEs.
 SELECT
-	*,
+	TE.Estado_Civil,
+	TE.[Total Estado Civil],
+	TC.[Total Clientes],
+	-- Calcula a porcentagem de clientes por estado civil.
 	(100.0 * [Total Estado Civil]) / [Total Clientes] AS [% Por Estado Civil]
-FROM CTE_Distribuicao_EstadoCivil
+FROM Total_Estado_Civil TE
+CROSS JOIN Total_Clientes TC
+
 
 -- Pergunta 2: Quantos clientes temos em cada país?
 
@@ -31,6 +46,7 @@ ORDER BY [Clientes Por País] DESC;
 -- Pergunta 3: Qual é a distribuição de clientes por gênero em cada faixa etária?
 
 /*
+Faixas etárias usadas na distribuição:
 [1]	0-17 anos
 [2]	18-25 anos
 [3]	26-35 anos
@@ -44,6 +60,7 @@ AS
 (
 	SELECT 
 		Genero,
+		-- Calcula a faixa etária com base na diferença de anos entre a data de nascimento e a data atual.
 		CASE 
 			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) <= 17 THEN 1
 			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 18 AND 25 THEN 2
@@ -58,19 +75,18 @@ AS
 SELECT
 	Genero,
 	CASE
-		WHEN Faixa_Etaria = 1 THEN '0-17'
-		WHEN Faixa_Etaria = 2 THEN '18-25'
-		WHEN Faixa_Etaria = 3 THEN '26-35'
-		WHEN Faixa_Etaria = 4 THEN '36-45'
-		WHEN Faixa_Etaria = 5 THEN '46-55'
-		WHEN Faixa_Etaria = 6 THEN '56-65'
-		ELSE '66+'
+		WHEN Faixa_Etaria = 1 THEN '0-17'  -- Faixa 1 corresponde ao intervalo '0-17 anos'.
+		WHEN Faixa_Etaria = 2 THEN '18-25' -- Faixa 2 corresponde ao intervalo '18-25 anos'.
+		WHEN Faixa_Etaria = 3 THEN '26-35' -- Faixa 3 corresponde ao intervalo '26-35 anos'.
+		WHEN Faixa_Etaria = 4 THEN '36-45' -- Faixa 4 corresponde ao intervalo '36-45 anos'.
+		WHEN Faixa_Etaria = 5 THEN '46-55' -- Faixa 5 corresponde ao intervalo '46-55 anos'.
+		WHEN Faixa_Etaria = 6 THEN '56-65'  -- Faixa 6 corresponde ao intervalo '56-65 anos'.
+		ELSE '66+'						 -- Faixa 7 corresponde ao intervalo '66 anos ou mais'.
 	END	Faixa_Etaria,
 	COUNT(Faixa_Etaria) AS Total_Genero
 FROM CTE_Distribuicao_Genero
 GROUP BY Faixa_Etaria, Genero
-ORDER BY Faixa_Etaria,
-		 Total_Genero DESC;
+ORDER BY Faixa_Etaria, Total_Genero DESC;
 
 -- Pergunta 4: Qual é o nível educacional mais comum entre os clientes?
 
@@ -90,7 +106,7 @@ ORDER BY QTDE DESC;
 	P.Produto AS Nome,
 	COUNT(I.Qtd_Vendida) AS Qtde_Vendas,
 	SUM(I.Qtd_Vendida * P.Preço_Unitario) AS Total
- FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
+FROM Produtos P INNER JOIN Itens I ON P.SKU = I.SKU
 GROUP BY P.Produto	
 ORDER BY Total DESC;
 
@@ -150,6 +166,8 @@ GROUP BY P.Produto
 ORDER BY Quant_Devolucoes DESC;
 
 -- Pergunta 11: Qual é a taxa de devolução por produto?
+
+-- -- CTE para calcular o total de devoluções por produto
 WITH Devolucoes_Totais AS (
 	SELECT
 		D.SKU,
@@ -157,6 +175,8 @@ WITH Devolucoes_Totais AS (
 	FROM Devolucoes D 
 	GROUP BY D.SKU
 ),
+
+-- CTE para calcular o total de vendas por produto
 Vendas_Totais AS (
 	SELECT
 		I.SKU,
@@ -164,6 +184,8 @@ Vendas_Totais AS (
 	FROM Itens I INNER JOIN Vendas V ON V.Id_Venda = I.Id_Venda
 	GROUP BY I.SKU
 )
+
+---- Seleção principal das 20 produtos com a maior taxa de devolução
 SELECT TOP 20
 	P.Produto,
 	VT.Total_Vendido,
