@@ -46,22 +46,37 @@ Abaixo segue o diagrama do banco chamado Vendas e seus respectivos relacionament
 **Pergunta 1**: Qual é a distribuição de clientes por estado civil?
 
 ~~~SQL
-WITH CTE_Distribuicao_EstadoCivil
-AS
+
+-- CTE para calcular a quantidade total de clientes por Estado Civil.
+WITH Total_Estado_Civil AS
 (
 	SELECT 
-		CASE WHEN Estado_Civil = 'C' THEN 'Solteiro(a)'
+		CASE
+			WHEN Estado_Civil = 'C' THEN 'Solteiro(a)'
 			ELSE 'Casado(a)'
 		END	Estado_Civil,
-		COUNT(*) AS [Total Estado Civil],
-		(SELECT COUNT(*) FROM Clientes) AS [Total Clientes]
+		COUNT(*) AS [Total Estado Civil] -- Conta o número de clientes em cada estado civil.		
 	FROM Clientes
 	GROUP BY Estado_Civil
+),
+
+-- CTE para calcular o total geral de clientes na tabela.
+Total_Clientes AS
+(
+	SELECT 
+		COUNT(*) AS [Total Clientes]
+	FROM Clientes 
 )
+
+-- Consulta principal para combinar os resultados das duas CTEs.
 SELECT
-	*,
+	TE.Estado_Civil,
+	TE.[Total Estado Civil],
+	TC.[Total Clientes],
+	-- Calcula a porcentagem de clientes por estado civil.
 	(100.0 * [Total Estado Civil]) / [Total Clientes] AS [% Por Estado Civil]
-FROM CTE_Distribuicao_EstadoCivil
+FROM Total_Estado_Civil TE
+CROSS JOIN Total_Clientes TC
 ~~~
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2001.png)
 
