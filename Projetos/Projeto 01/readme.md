@@ -14,8 +14,8 @@ tomar decisões informadas. Esses insights são essenciais para entender melhor 
 aumentar as vendas.
 
 ## Objetivo da Análise com SQL
-A análise de dados utilizando SQL será fundamental para resolver esses problemas e fornecer insights valiosos que ajudam a aumentar as vendas de várias maneiras. 
-As seguintes análises serão realizadas:
+Utilizar técnicas de análise de dados para examinar o desempenho de vendas, comportamento do cliente, produtos, devoluções e operação das lojas da TechGlobal Solutions. 
+O foco está em gerar insights acionáveis que orientem decisões estratégicas para otimizar operações, aumentar a rentabilidade e melhorar a experiência do cliente.
 *	Análise de Clientes
 *	Análise de Produtos e Vendas
 *	Análise de Devoluções
