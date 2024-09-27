@@ -168,19 +168,44 @@ SELECT TOP 20
 	P.Produto,
 	VT.Total_Vendido,
 	DT.Totais_Devolucao,
-	(SUM(DT.Totais_Devolucao) * 100.0 / SUM(VT.Total_Vendido)) AS 'Taxa_Devolucao%'
+	(SUM(DT.Totais_Devolucao) * 100.0 / SUM(VT.Total_Vendido)) AS [Taxa_Devolucao%]
 FROM Produtos P 
 INNER JOIN Vendas_Totais VT ON P.SKU = VT.SKU
 INNER JOIN Devolucoes_Totais DT ON DT.SKU = P.SKU
 GROUP BY P.Produto,VT.Total_Vendido, DT.Totais_Devolucao
-ORDER BY 'Taxa_Devolucao%' DESC;
+ORDER BY [Taxa_Devolucao%] DESC;
 
 -- Pergunta 12: Qual loja tem a maior taxa de devoluções?
 
+-- CTE para calcular o total de devoluções por loja
+WITH Devolucoes_Totais AS (
+	SELECT
+		D.ID_Loja,
+		SUM(D.Qtd_Devolvida) AS Totais_Lojas_Devolucao
+	FROM Devolucoes D 
+	GROUP BY D.ID_Loja
+),
 
+-- CTE para calcular o total de vendas por loja
+Vendas_Totais AS (
+	SELECT
+		V.ID_Loja,
+		SUM(I.Qtd_Vendida) AS Total_Lojas_Vendas
+	FROM Itens I INNER JOIN Vendas V ON V.Id_Venda = I.Id_Venda
+	GROUP BY V.ID_Loja
+)
 
-
-
+-- Seleção principal das 20 lojas com a maior taxa de devolução
+SELECT TOP 20
+	L.ID_Loja,
+	Total_Lojas_Vendas,
+	Totais_Lojas_Devolucao,
+	DT.Totais_Lojas_Devolucao * 100.0 / VT.Total_Lojas_Vendas AS [Taxa_Devolucao_por_Loja%]
+FROM Lojas L
+INNER JOIN Vendas_Totais VT ON VT.ID_Loja = L.ID_Loja
+INNER JOIN Devolucoes_Totais DT ON DT.ID_Loja = L.ID_Loja
+GROUP BY L.ID_Loja, Totais_Lojas_Devolucao, Total_Lojas_Vendas
+ORDER BY [Taxa_Devolucao_por_Loja%] DESC;
 
 
 
