@@ -287,7 +287,7 @@ ORDER BY 'Taxa_Devolucao%' DESC;
 **Pergunta 12**: Qual loja tem a maior taxa de devoluções?
 
 ~~~SQL
-##CTE para calcular o total de devoluções por loja
+-- CTE para calcular o total de devoluções por loja
 WITH Devolucoes_Totais AS (
 	SELECT
 		D.ID_Loja,
