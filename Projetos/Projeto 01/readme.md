@@ -274,6 +274,7 @@ ORDER BY Quant_Devolucoes DESC;
 **Pergunta 11**: Quais são as maiores taxas de devoluções por produto?
 
 ~~~SQL
+-- -- CTE para calcular o total de devoluções por produto
 WITH Devolucoes_Totais AS (
 	SELECT
 		D.SKU,
@@ -281,6 +282,8 @@ WITH Devolucoes_Totais AS (
 	FROM Devolucoes D 
 	GROUP BY D.SKU
 ),
+
+-- CTE para calcular o total de vendas por produto
 Vendas_Totais AS (
 	SELECT
 		I.SKU,
@@ -288,16 +291,18 @@ Vendas_Totais AS (
 	FROM Itens I INNER JOIN Vendas V ON V.Id_Venda = I.Id_Venda
 	GROUP BY I.SKU
 )
+
+---- Seleção principal das 20 produtos com a maior taxa de devolução
 SELECT TOP 20
 	P.Produto,
 	VT.Total_Vendido,
 	DT.Totais_Devolucao,
-	(SUM(DT.Totais_Devolucao) * 100.0 / SUM(VT.Total_Vendido)) AS 'Taxa_Devolucao%'
+	(SUM(DT.Totais_Devolucao) * 100.0 / SUM(VT.Total_Vendido)) AS [Taxa_Devolucao%]
 FROM Produtos P 
 INNER JOIN Vendas_Totais VT ON P.SKU = VT.SKU
 INNER JOIN Devolucoes_Totais DT ON DT.SKU = P.SKU
 GROUP BY P.Produto,VT.Total_Vendido, DT.Totais_Devolucao
-ORDER BY 'Taxa_Devolucao%' DESC;
+ORDER BY [Taxa_Devolucao%] DESC;
 ~~~
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2011.png)
 
