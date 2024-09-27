@@ -100,6 +100,7 @@ ORDER BY [Clientes Por País] DESC;
 **Pergunta 3**: Qual é a distribuição de clientes por gênero em cada faixa etária?
 ~~~SQL
 /*
+Faixas etárias usadas na distribuição:
 [1]	0-17 anos
 [2]	18-25 anos
 [3]	26-35 anos
@@ -113,6 +114,7 @@ AS
 (
 	SELECT 
 		Genero,
+		-- Calcula a faixa etária com base na diferença de anos entre a data de nascimento e a data atual.
 		CASE 
 			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) <= 17 THEN 1
 			WHEN  DATEDIFF(YEAR, Data_Nascimento, GETDATE()) BETWEEN 18 AND 25 THEN 2
@@ -127,19 +129,19 @@ AS
 SELECT
 	Genero,
 	CASE
-		WHEN Faixa_Etaria = 1 THEN '0-17'
-		WHEN Faixa_Etaria = 2 THEN '18-25'
-		WHEN Faixa_Etaria = 3 THEN '26-35'
-		WHEN Faixa_Etaria = 4 THEN '36-45'
-		WHEN Faixa_Etaria = 5 THEN '46-55'
-		WHEN Faixa_Etaria = 6 THEN '56-65'
-		ELSE '66+'
+		WHEN Faixa_Etaria = 1 THEN '0-17'  -- Faixa 1 corresponde ao intervalo '0-17 anos'.
+		WHEN Faixa_Etaria = 2 THEN '18-25' -- Faixa 2 corresponde ao intervalo '18-25 anos'.
+		WHEN Faixa_Etaria = 3 THEN '26-35' -- Faixa 3 corresponde ao intervalo '26-35 anos'.
+		WHEN Faixa_Etaria = 4 THEN '36-45' -- Faixa 4 corresponde ao intervalo '36-45 anos'.
+		WHEN Faixa_Etaria = 5 THEN '46-55' -- Faixa 5 corresponde ao intervalo '46-55 anos'.
+		WHEN Faixa_Etaria = 6 THEN '56-65'  -- Faixa 6 corresponde ao intervalo '56-65 anos'.
+		ELSE '66+'						 -- Faixa 7 corresponde ao intervalo '66 anos ou mais'.
 	END	Faixa_Etaria,
 	COUNT(Faixa_Etaria) AS Total_Genero
 FROM CTE_Distribuicao_Genero
 GROUP BY Faixa_Etaria, Genero
-ORDER BY Faixa_Etaria,
-		 Total_Genero DESC;
+ORDER BY Faixa_Etaria, Total_Genero DESC;
+
 ~~~
 
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2003.png)
