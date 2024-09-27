@@ -43,7 +43,7 @@ Abaixo segue o diagrama do banco chamado Vendas e seus respectivos relacionament
 ## Análises e Insights
 
 ### Análise de Clientes
-**Pergunta 1**: Qual é a distribuição de clientes por estado civil?
+> **Pergunta 1**: Qual é a distribuição de clientes por estado civil?
 
 ~~~SQL
 
@@ -82,7 +82,7 @@ CROSS JOIN Total_Clientes TC
 
 **Insight**: Identificar quais estados civis são mais comuns entre os clientes, permitindo segmentações específicas.
 
-**Pergunta 2**: Quantos clientes temos em cada país?
+> **Pergunta 2**: Quantos clientes temos em cada país?
 
 ~~~SQL
 SELECT 
@@ -97,7 +97,7 @@ ORDER BY [Clientes Por País] DESC;
 
 **Insight**: Identificar a distribuição geográfica dos clientes pode ajudar a adaptar estratégias de marketing para diferentes regiões.
 
-**Pergunta 3**: Qual é a distribuição de clientes por gênero em cada faixa etária?
+> **Pergunta 3**: Qual é a distribuição de clientes por gênero em cada faixa etária?
 ~~~SQL
 /*
 Faixas etárias usadas na distribuição:
@@ -149,7 +149,7 @@ ORDER BY Faixa_Etaria, Total_Genero DESC;
 **Insight**: Entender a distribuição de gênero em diferentes faixas etárias pode ajudar a criar campanhas de marketing mais direcionadas.
 
 
-**Pergunta 4**: Qual é o nível educacional mais comum entre os clientes?
+> **Pergunta 4**: Qual é o nível educacional mais comum entre os clientes?
 ~~~SQL
 SELECT 
 	Nivel_Escolar AS Nivel_Educacional,
@@ -165,7 +165,7 @@ ORDER BY QTDE DESC;
 
 ### Análise de Produtos e Vendas
 
-**Pergunta 5**: Quais são os produtos mais vendidos?
+> **Pergunta 5**: Quais são os produtos mais vendidos?
 
 ~~~SQL
 SELECT TOP 10
@@ -181,7 +181,7 @@ ORDER BY Total DESC;
 **Insight**: Identificar os produtos que têm maior demanda para otimizar o estoque e promover os itens mais populares.
 
 
-**Pergunta 6**: Qual é a receita total por marca?
+> **Pergunta 6**: Qual é a receita total por marca?
 
 ~~~SQL
 SELECT 
@@ -198,7 +198,7 @@ ORDER BY 2 DESC;
 **Insight**: Calcular a receita total gerada por cada marca para identificar os produtos mais lucrativos.
 
 
-**Pergunta 7**: Qual é a receita média por venda?
+> **Pergunta 7**: Qual é a receita média por venda?
 
 ~~~SQL
 SELECT
@@ -221,7 +221,7 @@ FROM (
 **Insight**: Calcular a receita média por venda ajuda a avaliar o ticket médio e otimizar estratégias de precificação.
 
 
-**Pergunta 8**: Quais produtos têm a maior margem de lucro?
+> **Pergunta 8**: Quais produtos têm a maior margem de lucro?
 
 ~~~SQL
 SELECT 
@@ -242,7 +242,7 @@ ORDER BY 5 DESC;
 
 ### Análise de Devoluções
 
-**Pergunta 9**: Qual é o motivo de devolução mais comum?
+> **Pergunta 9**: Qual é o motivo de devolução mais comum?
 
 ~~~SQL
 SELECT 
@@ -256,7 +256,7 @@ ORDER BY Qtde_Totais_Devolucao DESC;
 
 **Insight**: Analisar os motivos das devoluções para identificar problemas comuns com produtos ou processos de venda.
 
-**Pergunta 10**: Quais produtos tem as maiores quantidades de devoluções?
+> **Pergunta 10**: Quais produtos tem as maiores quantidades de devoluções?
 
 ~~~SQL
 SELECT TOP 20
@@ -271,7 +271,7 @@ ORDER BY Quant_Devolucoes DESC;
 
 **Insight**: Identificar produtos que são frequentemente devolvidos, o que pode indicar problemas de qualidade ou expectativas dos clientes.
 
-**Pergunta 11**: Quais são as maiores taxas de devoluções por produto?
+> **Pergunta 11**: Quais são as maiores taxas de devoluções por produto?
 
 ~~~SQL
 -- -- CTE para calcular o total de devoluções por produto
