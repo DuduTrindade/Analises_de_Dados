@@ -308,7 +308,7 @@ ORDER BY [Taxa_Devolucao%] DESC;
 
 **Insight**: Calcular a taxa de devolução pode ajudar a identificar problemas com produtos específicos.
 
->0**Pergunta 12**: Qual loja tem a maior taxa de devoluções?
+> **Pergunta 12**: Qual loja tem a maior taxa de devoluções?
 
 ~~~SQL
 -- CTE para calcular o total de devoluções por loja
