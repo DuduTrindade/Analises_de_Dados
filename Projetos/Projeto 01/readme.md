@@ -349,7 +349,7 @@ ORDER BY [Taxa_Devolucao_por_Loja%] DESC;
 
 ### Análise Geográfica
 
-> 📝**Pergunta 13**: Qual é a receita total de vendas por país ao longo dos anos?
+>📝 **Pergunta 13**: Qual é a receita total de vendas por país ao longo dos anos?
 
 
 
