@@ -347,7 +347,9 @@ ORDER BY [Taxa_Devolucao_por_Loja%] DESC;
 **Insight**: Identificar lojas com altas taxas de devolução pode apontar para problemas específicos de atendimento ou produto.
 
 
+### Análise Geográfica
 
+> 🧾🟢✅📝**Pergunta 13**: Qual é a receita total de vendas por país ao longo dos anos?
 
 
 
