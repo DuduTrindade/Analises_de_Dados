@@ -80,12 +80,7 @@ CROSS JOIN Total_Clientes TC
 ~~~
 ![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2001.png)
 
-**Insight**: A análise da distribuição de clientes por estado civil mostra a proporção de clientes solteiros e 
-casados na TechGlobal Solutions. Com essas informações, a empresa pode segmentar melhor seu público e criar campanhas
- de marketing específicas. Por exemplo, se há muitos solteiros, podem ser promovidos produtos voltados para entretenimento 
- individual, enquanto ofertas familiares podem ser direcionadas aos casados. Além disso, essa análise ajuda a desenvolver 
- produtos que atendam às necessidades de cada grupo e a acompanhar mudanças nas preferências dos clientes ao longo do tempo, 
- resultando em estratégias que aumentam a satisfação e a rentabilidade da empresa.
+**Insight**: Identificar quais estados civis são mais comuns entre os clientes, permitindo segmentações específicas.
 
 > **Pergunta 2**: Quantos clientes temos em cada país?
 
