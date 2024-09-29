@@ -416,8 +416,9 @@ FROM (
 GROUP BY Mensal_Vendas.Continente
 ~~~
 
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2014.png)
 
-
+**Insight**: Avaliar a média de vendas mensais por continente pode ajudar a identificar padrões sazonais em diferentes regiões e ajustar as operações de acordo.
 
 
 
