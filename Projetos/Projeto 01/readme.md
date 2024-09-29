@@ -391,9 +391,30 @@ ORDER BY Ano, País
 estão contribuindo mais para a receita e quais precisam de estratégias de marketing mais focadas.
 
 
+> 📝 **Pergunta 14: Qual é a média de vendas mensais por continente?**
 
+~~~SQL
+-- Seleciona o continente e a média mensal de vendas
+SELECT
+	Mensal_Vendas.Continente, -- Seleciona o continente calculado na subconsulta
+	AVG(Mensal_Vendas.Total_Vendas_Mensal) AS Media_Mensal_Vendas -- Calcula a média de vendas mensais por continente
+FROM (
 
-
+	-- Subconsulta para calcular o total de vendas mensais por continente
+	SELECT 
+		LC.Continente,
+		YEAR(V.Data_Venda) AS Ano,
+		MONTH(V.Data_Venda) AS Mes,
+		SUM(I.Qtd_Vendida * P.Preço_Unitario) AS Total_Vendas_Mensal
+	FROM Vendas V 
+	INNER JOIN Itens I ON V.Id_Venda = I.Id_Venda
+	INNER JOIN Produtos P ON P.SKU = I.SKU
+	INNER JOIN Lojas L ON L.ID_Loja = V.ID_Loja
+	INNER JOIN Localidades LC ON LC.ID_Localidade = L.id_Localidade
+	GROUP BY LC.Continente, YEAR(V.Data_Venda), MONTH(V.Data_Venda) 
+) AS Mensal_Vendas 
+GROUP BY Mensal_Vendas.Continente
+~~~
 
 
 
