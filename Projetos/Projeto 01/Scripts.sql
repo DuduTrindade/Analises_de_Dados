@@ -231,18 +231,31 @@ INNER JOIN Devolucoes_Totais DT ON DT.ID_Loja = L.ID_Loja
 GROUP BY L.ID_Loja, Totais_Lojas_Devolucao, Total_Lojas_Vendas
 ORDER BY [Taxa_Devolucao_por_Loja%] DESC;
 
+-- Pergunta 13: Qual é a receita total de vendas por país ao longo dos anos?
+WITH Vendas_agregadas AS
+(
+	SELECT 
+		YEAR(V.Data_Venda) AS Ano,
+		LC.País,
+		SUM(P.Preço_Unitario) AS Total_Vendas_Ano
+	FROM Vendas V
+	INNER JOIN Itens I ON V.Id_Venda = I.Id_Venda
+	INNER JOIN Lojas L ON L.ID_Loja = V.ID_Loja
+	INNER JOIN Localidades LC ON LC.ID_Localidade = L.id_Localidade
+	INNER JOIN Produtos P ON P.SKU = I.SKU
+	GROUP BY YEAR(V.Data_Venda), LC.País
+	
+)
+SELECT
+	Ano,
+	País,
+	Total_Vendas_Ano AS Total_Ano_Atual,
+	LAG(Total_Vendas_Ano, 1, Total_Vendas_Ano) OVER (PARTITION BY País ORDER BY Ano) AS Total_Ano_Anterior,
 
-
-
-
-
-
-
-
-
-
-
-
+	-- Cálculo YoY : (Valor Atual / Valor Anterior) - 1
+	(Total_Vendas_Ano / LAG(Total_Vendas_Ano, 1, Total_Vendas_Ano) OVER (PARTITION BY País ORDER BY Ano) -1) AS Crescimento_Percentual
+FROM Vendas_agregadas
+ORDER BY Ano, País
 
 
 
