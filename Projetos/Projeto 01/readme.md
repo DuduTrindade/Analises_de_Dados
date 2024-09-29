@@ -352,11 +352,14 @@ ORDER BY [Taxa_Devolucao_por_Loja%] DESC;
 >📝 **Pergunta 13: Qual é a receita total de vendas por país ao longo dos anos?**
 
 ~~~SQL
+-- CTE (Common Table Expression) para agregação de vendas por ano e país
 WITH Vendas_agregadas AS
 (
 	SELECT 
 		YEAR(V.Data_Venda) AS Ano,
 		LC.País,
+
+		-- Soma o preço unitário dos produtos vendidos para calcular o total de vendas no ano
 		SUM(P.Preço_Unitario) AS Total_Vendas_Ano
 	FROM Vendas V
 	INNER JOIN Itens I ON V.Id_Venda = I.Id_Venda
@@ -366,13 +369,17 @@ WITH Vendas_agregadas AS
 	GROUP BY YEAR(V.Data_Venda), LC.País
 	
 )
+-- Seleciona os resultados da CTE para realizar cálculos adicionais
 SELECT
 	Ano,
 	País,
 	Total_Vendas_Ano AS Total_Ano_Atual,
+
+	-- Função LAG usada para pegar o total de vendas do ano anterior
 	LAG(Total_Vendas_Ano, 1, Total_Vendas_Ano) OVER (PARTITION BY País ORDER BY Ano) AS Total_Ano_Anterior,
 
-	-- Cálculo YoY : (Valor Atual / Valor Anterior) - 1
+	-- Cálculo do crescimento percentual ano a ano (YoY)
+	-- (Total_Ano_Atual / Total_Ano_Anterior) - 1 indica a variação percentual de crescimento
 	(Total_Vendas_Ano / LAG(Total_Vendas_Ano, 1, Total_Vendas_Ano) OVER (PARTITION BY País ORDER BY Ano) -1) AS Crescimento_Percentual
 FROM Vendas_agregadas
 ORDER BY Ano, País
