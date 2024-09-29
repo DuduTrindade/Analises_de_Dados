@@ -421,9 +421,30 @@ GROUP BY Mensal_Vendas.Continente
 **Insight**: Avaliar a média de vendas mensais por continente pode ajudar a identificar padrões sazonais em diferentes regiões e ajustar as operações de acordo.
 
 
+> 📝 **Pergunta 15: Qual é a média de devoluções por país durante os anos?**
 
+~~~SQL
+WITH Media_Devolucao_Pais AS
+(
+	SELECT 
+		LC.País AS Pais,
+		YEAR(D.Data_Devolucao) AS Ano,
+		SUM(D.Qtd_Devolvida) AS Qtde_Devolvida
+	FROM Devolucoes D
+	INNER JOIN Lojas L ON L.ID_Loja = D.ID_Loja
+	INNER JOIN Localidades LC ON LC.ID_Localidade = L.id_Localidade
+	GROUP BY LC.País, YEAR(D.Data_Devolucao)
+)
 
+SELECT
+	MDP.Pais,
+	AVG(MDP.Qtde_Devolvida) AS Media_Devolucoes
+FROM Media_Devolucao_Pais MDP
+GROUP BY MDP.Pais
+~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2015.png)
 
+**Insight**: Entender a média de devoluções por país pode ajudar a identificar possíveis problemas de qualidade ou de atendimento ao cliente em determinadas regiões.
 
 
 
