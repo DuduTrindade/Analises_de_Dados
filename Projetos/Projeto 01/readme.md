@@ -43,7 +43,7 @@ Abaixo segue o diagrama do banco chamado Vendas e seus respectivos relacionament
 ## Análises e Insights
 
 ### Análise de Clientes
-> 📝**Pergunta 1**: Qual é a distribuição de clientes por estado civil?
+> 📝**Pergunta 1: Qual é a distribuição de clientes por estado civil?**
 
 ~~~SQL
 
