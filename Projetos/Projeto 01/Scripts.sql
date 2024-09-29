@@ -286,16 +286,26 @@ FROM (
 	INNER JOIN Localidades LC ON LC.ID_Localidade = L.id_Localidade
 	GROUP BY LC.Continente, YEAR(V.Data_Venda), MONTH(V.Data_Venda) 
 ) AS Mensal_Vendas 
-GROUP BY Mensal_Vendas.Continente
+GROUP BY Mensal_Vendas.Continente;
 
+-- Pergunta 15: Qual é a média de devoluções por país duarante os anos?
+WITH Media_Devolucao_Pais AS
+(
+	SELECT 
+		LC.País AS Pais,
+		YEAR(D.Data_Devolucao) AS Ano,
+		SUM(D.Qtd_Devolvida) AS Qtde_Devolvida
+	FROM Devolucoes D
+	INNER JOIN Lojas L ON L.ID_Loja = D.ID_Loja
+	INNER JOIN Localidades LC ON LC.ID_Localidade = L.id_Localidade
+	GROUP BY LC.País, YEAR(D.Data_Devolucao)
+)
 
-
-
-
-
-
-
-
+SELECT
+	MDP.Pais,
+	AVG(MDP.Qtde_Devolvida) AS Media_Devolucoes
+FROM Media_Devolucao_Pais MDP
+GROUP BY MDP.Pais
 
 
 
