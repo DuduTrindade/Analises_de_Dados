@@ -474,9 +474,9 @@ FROM Receita_Total_Continente R
 **Insight**: Analisar a receita total de vendas por continente e tipo de loja pode ajudar a identificar quais tipos de lojas são mais bem-sucedidos em diferentes regiões.
 
 
+### Análise de Performance das Lojas
 
-
-
+> 📝 **Pergunta 17: Qual loja tem o maior número de vendas?**
 
 
 
