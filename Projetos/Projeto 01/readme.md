@@ -507,7 +507,9 @@ INNER JOIN Produtos P ON P.SKU = I.SKU
 GROUP BY L.Nome_Loja
 ORDER BY Faturamento DESC;
 ~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2018.png)
 
+**Insight**: Determinar qual loja gera mais receita pode ajudar a identificar melhores práticas e replicar em outras lojas.
 
 
 
