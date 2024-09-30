@@ -469,7 +469,9 @@ SELECT
 	 FORMAT(SUM(R.Total_Continente) OVER(PARTITION BY R.Continente), 'C0') AS Total_Continente	
 FROM Receita_Total_Continente R
 ~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2016.png)
 
+**Insight**: Analisar a receita total de vendas por continente e tipo de loja pode ajudar a identificar quais tipos de lojas são mais bem-sucedidos em diferentes regiões.
 
 
 
