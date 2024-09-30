@@ -305,16 +305,29 @@ SELECT
 	MDP.Pais,
 	AVG(MDP.Qtde_Devolvida) AS Media_Devolucoes
 FROM Media_Devolucao_Pais MDP
-GROUP BY MDP.Pais
+GROUP BY MDP.Pais;
 
+-- Pergunta 16: Qual é a receita total de vendas por continente e tipo de loja?
 
-
-
-
-
-
-
-
+WITH Receita_Total_Continente AS
+(
+	SELECT
+		LC.Continente,
+		L.Tipo,
+		SUM(I.Qtd_Vendida * P.Preço_Unitario)AS Total_Continente
+	FROM Vendas V
+	INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
+	INNER JOIN Produtos P ON P.SKU = I.SKU
+	INNER JOIN Lojas L ON L.ID_Loja = V.ID_Loja
+	INNER JOIN Localidades LC ON LC.ID_Localidade = L.id_Localidade
+	GROUP BY LC.Continente, L.Tipo
+)
+SELECT 
+	 R.Continente,
+	 R.Tipo,	 
+	 FORMAT(R.Total_Continente,	'C0') AS Valor_Tipo_Loja,
+	 FORMAT(SUM(R.Total_Continente) OVER(PARTITION BY R.Continente), 'C0') AS Total_Continente	
+FROM Receita_Total_Continente R
 
 
 
