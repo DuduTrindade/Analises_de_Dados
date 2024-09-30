@@ -329,10 +329,29 @@ SELECT
 	 FORMAT(SUM(R.Total_Continente) OVER(PARTITION BY R.Continente), 'C0') AS Total_Continente	
 FROM Receita_Total_Continente R
 
+
 -- Pergunta 17: Qual loja tem o maior número de vendas?
+SELECT TOP 1
+	L.Nome_Loja,
+	SUM(I.Qtd_Vendida) AS Qtde_Vendida
+FROM LOJAS L 
+INNER JOIN Vendas V ON V.ID_Loja = L.ID_Loja
+INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
+GROUP BY L.Nome_Loja
 
-SELECT * FROM LOJAS
 
+
+-- Pergunta 18: Qual loja tem a maior receita total?
+
+SELECT TOP 1
+	L.Nome_Loja,
+	FORMAT(SUM(P.Preço_Unitario * I.Qtd_Vendida), 'C2') AS Faturamento
+FROM LOJAS L 
+INNER JOIN Vendas V ON V.ID_Loja = L.ID_Loja
+INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
+INNER JOIN Produtos P ON P.SKU = I.SKU
+GROUP BY L.Nome_Loja
+ORDER BY Faturamento DESC;
 
 
 
