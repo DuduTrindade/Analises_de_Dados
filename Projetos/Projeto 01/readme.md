@@ -494,3 +494,24 @@ ORDER BY Qtde_Vendida DESC;
 **Insight**: Determinar qual loja é a mais ativa em termos de vendas para entender melhor o desempenho das diferentes localidades.
 
 
+> 📝 **Pergunta 18: Qual loja tem a maior receita total?**
+
+~~~SQL
+SELECT TOP 1
+	L.Nome_Loja,
+	FORMAT(SUM(P.Preço_Unitario * I.Qtd_Vendida), 'C2') AS Faturamento
+FROM LOJAS L 
+INNER JOIN Vendas V ON V.ID_Loja = L.ID_Loja
+INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
+INNER JOIN Produtos P ON P.SKU = I.SKU
+GROUP BY L.Nome_Loja
+ORDER BY Faturamento DESC;
+~~~
+
+
+
+
+
+
+
+
