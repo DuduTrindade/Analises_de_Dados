@@ -329,9 +329,9 @@ SELECT
 	 FORMAT(SUM(R.Total_Continente) OVER(PARTITION BY R.Continente), 'C0') AS Total_Continente	
 FROM Receita_Total_Continente R
 
+-- Pergunta 17: Qual loja tem o maior número de vendas?
 
-
-
+SELECT * FROM LOJAS
 
 
 
