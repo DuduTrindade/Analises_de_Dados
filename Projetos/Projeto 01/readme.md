@@ -536,7 +536,7 @@ ORDER BY SUM(P.Preço_Unitario * I.Qtd_Vendida) DESC;
 ## Conclusão 
 O projeto de análise de dados da TechGlobal Solutions teve como objetivo otimizar as operações e maximizar a rentabilidade de uma empresa fictícia de varejo de eletrônicos. 
 Através de técnicas avançadas de análise de dados utilizando SQL, foram exploradas várias áreas críticas para o negócio, como o comportamento dos clientes, desempenho de
- produtos, devoluções e a performance regional das lojas.
+produtos, devoluções e a performance regional das lojas.
 
 A análise de dados revelou padrões de compra, identificou os produtos mais rentáveis e destacou aqueles com maior taxa de devoluções. Isso possibilitou que a 
 empresa ajustasse seu portfólio, melhorasse a qualidade dos produtos e otimizasse as descrições e imagens nas plataformas de venda. Também foram observadas variações 
