@@ -12,7 +12,7 @@ A TechGlobal enfrenta dificuldades como alta taxa de devoluções, desafios no g
 esses problemas, são necessárias análises que ajudem a entender o comportamento dos clientes, a demanda por produtos e as performances das lojas em diferentes regiões.
 
 O principal objetivo da análise é identificar padrões nos dados de vendas, devoluções e comportamento dos clientes. Isso permitirá a empresa melhorar a experiência do cliente, 
-aumentar as vendas e reduzir custos operacionais.
+aumentar as vendas e reduzir custos operacionais. As seguintes análises serão realizadas:
 
 *	Análise de Clientes
 *	Análise de Produtos e Vendas
