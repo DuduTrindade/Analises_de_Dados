@@ -8,10 +8,8 @@ diversas regiões e países. Com uma ampla gama de produtos e um alcance geográ
 para uma base de clientes diversificada. Retornar ao [início.](https://github.com/DuduTrindade/Analises_de_Dados/tree/main)
 
 ## Situação Problema
-A empresa está enfrentando múltiplos desafios que estão impactando a eficiência operacional e a 
-rentabilidade. Com uma base de clientes diversificada e uma ampla gama de produtos distribuídos por várias regiões e países, a empresa precisa de insights detalhados para 
-tomar decisões informadas. Esses insights são essenciais para entender melhor os clientes, otimizar o estoque, melhorar as estratégias de marketing, reduzir as devoluções e 
-aumentar as vendas.
+A empresa está enfrenta dificuldades como alta taxa de devoluções, desafios no gerenciamento de estoque, e precisa otimizar suas estratégias de marketing e vendas. Para
+ resolver esses problemas, são necessárias análises que ajudem a entender o comportamento dos clientes, a demanda por produtos e as performances das lojas em diferentes regiões.
 
 ## Objetivo da Análise com SQL
 Utilizar técnicas de análise de dados para examinar o desempenho de vendas, comportamento do cliente, produtos, devoluções e operação das lojas da TechGlobal Solutions. 
