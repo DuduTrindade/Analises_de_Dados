@@ -534,13 +534,29 @@ ORDER BY SUM(P.Preço_Unitario * I.Qtd_Vendida) DESC;
 
 
 ## Conclusão 
-Através da análise aprofundada dos dados da TechGlobal Solutions, foi possível alcançar diversos insights estratégicos que direcionaram ações fundamentais para o
-crescimento sustentável da empresa. A otimização do portfólio de produtos, a personalização das campanhas de marketing e a melhoria nas operações de estoque foram algumas 
-das mudanças implementadas com base nos dados analisados.
+O projeto de análise de dados da TechGlobal Solutions teve como objetivo otimizar as operações e maximizar a rentabilidade de uma empresa fictícia de varejo de eletrônicos. 
+Através de técnicas avançadas de análise de dados utilizando SQL, foram exploradas várias áreas críticas para o negócio, como o comportamento dos clientes, desempenho de
+ produtos, devoluções e a performance regional das lojas.
 
-Esses ajustes não apenas reduziram os custos operacionais, como também proporcionaram um aumento significativo na satisfação dos clientes, refletido em um maior índice de 
-retenção e redução nas taxas de devolução. Além disso, a personalização das estratégias de vendas por região garantiu que a empresa estivesse alinhada às necessidades e 
-preferências dos consumidores em diferentes mercados.
+A análise de dados revelou padrões de compra, identificou os produtos mais rentáveis e destacou aqueles com maior taxa de devoluções. Isso possibilitou que a 
+empresa ajustasse seu portfólio, melhorasse a qualidade dos produtos e otimizasse as descrições e imagens nas plataformas de venda. Também foram observadas variações 
+no desempenho entre as diferentes regiões, permitindo que a empresa realocasse recursos e ajustasse suas estratégias de marketing de forma mais eficaz.
 
-Em suma, a TechGlobal Solutions demonstrou o valor da análise de dados para tomar decisões informadas e se posicionar de forma competitiva no mercado de tecnologia. 
-Ao continuar a usar os dados como guia, a empresa está bem posicionada para enfrentar futuros desafios e aproveitar novas oportunidades de crescimento.
+Como resultado, as ações tomadas com base nos dados não apenas reduziram custos operacionais, mas também melhoraram a satisfação dos clientes, aumentaram a retenção e 
+reduziram as devoluções. No geral, a análise de dados ajudou a TechGlobal Solutions a tomar decisões informadas e a se posicionar de forma competitiva no mercado, garantindo 
+maior eficiência e melhores resultados financeiros a longo prazo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
