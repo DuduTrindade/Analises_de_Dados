@@ -511,8 +511,19 @@ ORDER BY Faturamento DESC;
 
 **Insight**: Determinar qual loja gera mais receita pode ajudar a identificar melhores práticas e replicar em outras lojas.
 
+> 📝 **Pergunta 19: Qual é o faturamento total das lojas físicas em comparação com as lojas online?**
 
-
+~~~SQL
+SELECT 
+	L.Tipo AS Tipo_Loja,
+	FORMAT(SUM(P.Preço_Unitario * I.Qtd_Vendida), 'C2') AS Faturamento
+FROM LOJAS L 
+INNER JOIN Vendas V ON V.ID_Loja = L.ID_Loja
+INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
+INNER JOIN Produtos P ON P.SKU = I.SKU
+GROUP BY L.Tipo
+ORDER BY SUM(P.Preço_Unitario * I.Qtd_Vendida) DESC;
+~~~
 
 
 
