@@ -8,7 +8,7 @@ diversas regiões e países. Com uma ampla gama de produtos e um alcance geográ
 para uma base de clientes diversificada. Retornar ao [início.](https://github.com/DuduTrindade/Analises_de_Dados/tree/main)
 
 ## Situação Problema
-A empresa de varejo fictícia TechGlobal Solutions especializada em produtos eletrônicos está enfrentando múltiplos desafios que estão impactando a eficiência operacional e a 
+A empresa está enfrentando múltiplos desafios que estão impactando a eficiência operacional e a 
 rentabilidade. Com uma base de clientes diversificada e uma ampla gama de produtos distribuídos por várias regiões e países, a empresa precisa de insights detalhados para 
 tomar decisões informadas. Esses insights são essenciais para entender melhor os clientes, otimizar o estoque, melhorar as estratégias de marketing, reduzir as devoluções e 
 aumentar as vendas.
