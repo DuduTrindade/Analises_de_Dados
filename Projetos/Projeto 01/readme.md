@@ -533,3 +533,14 @@ ORDER BY SUM(P.Preço_Unitario * I.Qtd_Vendida) DESC;
  empresa, permitindo identificar qual canal está gerando mais receita
 
 
+## Conclusão 
+Através da análise aprofundada dos dados da TechGlobal Solutions, foi possível alcançar diversos insights estratégicos que direcionaram ações fundamentais para o
+crescimento sustentável da empresa. A otimização do portfólio de produtos, a personalização das campanhas de marketing e a melhoria nas operações de estoque foram algumas 
+das mudanças implementadas com base nos dados analisados.
+
+Esses ajustes não apenas reduziram os custos operacionais, como também proporcionaram um aumento significativo na satisfação dos clientes, refletido em um maior índice de 
+retenção e redução nas taxas de devolução. Além disso, a personalização das estratégias de vendas por região garantiu que a empresa estivesse alinhada às necessidades e 
+preferências dos consumidores em diferentes mercados.
+
+Em suma, a TechGlobal Solutions demonstrou o valor da análise de dados para tomar decisões informadas e se posicionar de forma competitiva no mercado de tecnologia. 
+Ao continuar a usar os dados como guia, a empresa está bem posicionada para enfrentar futuros desafios e aproveitar novas oportunidades de crescimento.
