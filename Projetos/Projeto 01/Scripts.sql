@@ -231,6 +231,8 @@ INNER JOIN Devolucoes_Totais DT ON DT.ID_Loja = L.ID_Loja
 GROUP BY L.ID_Loja, Totais_Lojas_Devolucao, Total_Lojas_Vendas
 ORDER BY [Taxa_Devolucao_por_Loja%] DESC;
 
+-- ############# Análise Geográfica #################
+
 -- Pergunta 13: Qual é a receita total de vendas por país ao longo dos anos?
 
 -- CTE (Common Table Expression) para agregação de vendas por ano e país
@@ -329,6 +331,7 @@ SELECT
 	 FORMAT(SUM(R.Total_Continente) OVER(PARTITION BY R.Continente), 'C0') AS Total_Continente	
 FROM Receita_Total_Continente R
 
+-- ############# Análise de Performance das Lojas #################
 
 -- Pergunta 17: Qual loja tem o maior número de vendas?
 SELECT TOP 1
@@ -338,8 +341,7 @@ FROM LOJAS L
 INNER JOIN Vendas V ON V.ID_Loja = L.ID_Loja
 INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
 GROUP BY L.Nome_Loja
-
-
+ORDER BY Qtde_Vendida DESC;
 
 -- Pergunta 18: Qual loja tem a maior receita total?
 
@@ -353,7 +355,16 @@ INNER JOIN Produtos P ON P.SKU = I.SKU
 GROUP BY L.Nome_Loja
 ORDER BY Faturamento DESC;
 
-
+-- Pergunta 19: Qual é o faturamento total das lojas físicas em comparação com as lojas online?
+SELECT 
+	L.Tipo AS Tipo_Loja,
+	FORMAT(SUM(P.Preço_Unitario * I.Qtd_Vendida), 'C2') AS Faturamento
+FROM LOJAS L 
+INNER JOIN Vendas V ON V.ID_Loja = L.ID_Loja
+INNER JOIN Itens I ON I.Id_Venda = V.Id_Venda
+INNER JOIN Produtos P ON P.SKU = I.SKU
+GROUP BY L.Tipo
+ORDER BY SUM(P.Preço_Unitario * I.Qtd_Vendida) DESC;
 
 
 
