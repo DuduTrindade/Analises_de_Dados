@@ -14,8 +14,9 @@ baseadas em insights precisos para melhorar a rentabilidade, reduzir custos e en
 
 ## Objetivo das Análises
 
-A TechGlobal enfrenta desafios como uma alta taxa de devoluções, dificuldades no gerenciamento de estoque e a necessidade de aprimorar suas estratégias de marketing e vendas. 
-Para superar esses obstáculos, é essencial conduzir análises que esclareçam o comportamento dos clientes, a demanda por produtos e o desempenho das lojas em diferentes regiões.
+A TechGlobal enfrenta obstáculos significativos, como uma alta taxa de devoluções, dificuldades na gestão de estoque e a necessidade de otimizar
+suas estratégias de marketing e vendas. Para abordar essas questões, são necessárias análises detalhadas que revelem padrões no comportamento dos clientes,
+a demanda por produtos e o desempenho das lojas em diferentes regiões.
 
 O objetivo central da análise é descobrir padrões nos dados relacionados a vendas, devoluções e comportamento dos consumidores. Essas informações permitirão à empresa 
 aprimorar a experiência dos clientes, aumentar as vendas e otimizar os custos operacionais. As análises a serem realizadas incluem:
