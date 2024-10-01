@@ -524,7 +524,9 @@ INNER JOIN Produtos P ON P.SKU = I.SKU
 GROUP BY L.Tipo
 ORDER BY SUM(P.Preço_Unitario * I.Qtd_Vendida) DESC;
 ~~~
+![](https://github.com/DuduTrindade/Analises_de_Dados/blob/main/Projetos/Projeto%2001/img/pergunta%2019.png)
 
-
+**Insight**: Essa pergunta oferece uma visão clara de como cada tipo de loja contribui para o faturamento total da
+ empresa, permitindo identificar qual canal está gerando mais receita
 
 
