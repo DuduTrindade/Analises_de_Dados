@@ -12,7 +12,7 @@ estratégias de vendas em um mercado altamente competitivo.
 Diante disso, a TechGlobal decidiu apostar na análise de dados para impulsionar suas operações, tomando decisões 
 baseadas em insights precisos para melhorar a rentabilidade, reduzir custos e entender melhor o comportamento de seus clientes. Retornar ao [início.](https://github.com/DuduTrindade/Analises_de_Dados/tree/main)
 
-## Situação Problema
+## Objetivo das Análises
 
 A TechGlobal enfrenta desafios como uma alta taxa de devoluções, dificuldades no gerenciamento de estoque e a necessidade de aprimorar suas estratégias de marketing e vendas. 
 Para superar esses obstáculos, é essencial conduzir análises que esclareçam o comportamento dos clientes, a demanda por produtos e o desempenho das lojas em diferentes regiões.
