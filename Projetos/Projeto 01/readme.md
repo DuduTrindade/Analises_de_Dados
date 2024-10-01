@@ -2,10 +2,12 @@
 
 
 ## Introdução
-Este projeto analisa um negócio de varejo fictício especializado em produtos eletrônicos, incluindo dispositivos móveis, computadores e acessórios tecnológicos. 
-A empresa atende tanto clientes individuais quanto empresariais, operando através de uma plataforma online e uma rede de lojas físicas estrategicamente localizadas em 
-diversas regiões e países. Com uma ampla gama de produtos e um alcance geográfico significativo, a empresa se dedica a oferecer soluções tecnológicas de alta qualidade 
-para uma base de clientes diversificada. Retornar ao [início.](https://github.com/DuduTrindade/Analises_de_Dados/tree/main)
+A TechGlobal Solutions é uma empresa fictícia de varejo que atua no segmento de eletrônicos, oferecendo 
+desde dispositivos móveis e computadores até acessórios tecnológicos de ponta. Com presença em múltiplos 
+continentes e operando tanto online quanto em lojas físicas, a TechGlobal atende uma base diversificada 
+de clientes: indivíduos, pequenas e grandes empresas. Nos últimos anos, a empresa vem enfrentando desafios 
+relacionados ao aumento das devoluções, à complexidade na gestão de estoques e à necessidade de otimizar suas 
+estratégias de vendas em um mercado altamente competitivo.. Retornar ao [início.](https://github.com/DuduTrindade/Analises_de_Dados/tree/main)
 
 ## Situação Problema
 A TechGlobal enfrenta dificuldades como alta taxa de devoluções, desafios no gerenciamento de estoque, e precisa otimizar suas estratégias de marketing e vendas. Para resolver 
