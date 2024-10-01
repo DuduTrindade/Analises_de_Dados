@@ -9,9 +9,8 @@ para uma base de clientes diversificada. Retornar ao [início.](https://github.c
 
 ## Situação Problema
 A empresa está enfrenta dificuldades como alta taxa de devoluções, desafios no gerenciamento de estoque, e precisa otimizar suas estratégias de marketing e vendas. Para
- resolver esses problemas, são necessárias análises que ajudem a entender o comportamento dos clientes, a demanda por produtos e as performances das lojas em diferentes regiões.
+resolver esses problemas, são necessárias análises que ajudem a entender o comportamento dos clientes, a demanda por produtos e as performances das lojas em diferentes regiões.
 
-## Objetivo da Análise com SQL
 Utilizar técnicas de análise de dados para examinar o desempenho de vendas, comportamento do cliente, produtos, devoluções e operação das lojas da TechGlobal Solutions. 
 O foco está em gerar insights acionáveis que orientem decisões estratégicas para otimizar operações, aumentar a rentabilidade e melhorar a experiência do cliente.
 *	Análise de Clientes
